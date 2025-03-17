@@ -1,0 +1,113 @@
+[
+  {
+    "question": "Hi",
+    "answer": "Hello! How can I assist you today? You can book a ticket, check event timings, or get more information.",
+    "urdu_answer": "ہیلو! آج میں آپ کی مدد کیسے کر سکتا ہوں؟ آپ ٹکٹ بک کر سکتے ہیں، ایونٹ کے اوقات چیک کر سکتے ہیں، یا مزید معلومات حاصل کر سکتے ہیں۔",
+    "hindi_answer":"नमस्ते! आज मैं आपकी किस तरह से सहायता कर सकता हूँ? आप टिकट बुक कर सकते हैं, इवेंट का समय देख सकते हैं या अधिक जानकारी प्राप्त कर सकते हैं",
+    "franch_answer":"Bonjour ! Comment puis-je vous aider aujourd'hui ? Vous pouvez réserver un billet, consulter les horaires des événements ou obtenir plus d'informations."
+  },
+  
+  {
+    "question": "Book Ticket",
+    "hindi_question": "टिकट बुक करें",
+    "answer": "I can help you book a ticket. May I know your name?",
+    "urdu_answer": "میں ٹکٹ بک کرنے میں ypu کی مدد کر سکتا ہوں۔ کیا میں آپ کا نام جان سکتا ہوں؟",
+    "hindi_answer":"मैं टिकट बुक करने में आपकी मदद कर सकता हूँ। क्या मैं आपका नाम जान सकता हूँ?",
+    "franch_answer":"Je peux vous aider à réserver un billet. Puis-je connaître votre nom ?"
+  },
+  {
+    "question": "Thanks, (name)! Can you please provide your email?",
+    "answer": "Thanks, (name)! Can you please provide your email?",
+    "urdu_answer": "شکریہ، (name)! کیا آپ براہ کرم اپنا ای میل فراہم کر سکتے ہیں؟",
+    "hindi_answer": "धन्यवाद, (name)! कृपया अपना ईमेल प्रदान करें।",
+    "franch_answer": "Merci, (name)! Pouvez-vous fournir votre e-mail?"
+  },
+  {
+    "question": "Great! Now, can I have your phone number?",
+    "answer": "Great! Now, can I have your phone number?",
+    "urdu_answer": "بہت اچھا! اب، کیا مجھے آپ کا فون نمبر مل سکتا ہے؟",
+    "hindi_answer": "बहुत बढ़िया! अब, क्या मुझे आपका फ़ोन नंबर मिल सकता है?",
+    "franch_answer": "Super ! Maintenant, puis-je avoir ton numéro de téléphone ?"
+  }
+  ,
+  {
+    "question": "Do you offer international shipping?",
+    "answer": "Yes, we offer international shipping to most countries.",
+    "urdu_answer": "جی ہاں، ہم زیادہ تر ممالک کو بین الاقوامی شپنگ پیش کرتے ہیں۔"
+  },
+  {
+    "question": "How long does delivery take?",
+    "answer": "Delivery usually takes 3-5 business days for domestic orders.",
+    "urdu_answer": "ڈیلیوری عام طور پر گھریلو آرڈرز کے لیے 3-5 کاروباری دن لیتی ہے۔"
+  },
+  {
+    "question": "Can I cancel my order?",
+    "answer": "Yes, you can cancel your order before it has been shipped.",
+    "urdu_answer": "جی ہاں، آپ اپنا آرڈر شپ ہونے سے پہلے منسوخ کر سکتے ہیں۔"
+  },
+  {
+    "question": "What is your return policy?",
+    "answer": "We offer a 30-day return policy for most products.",
+    "urdu_answer": "ہم زیادہ تر مصنوعات کے لیے 30 دن کی واپسی کی پالیسی پیش کرتے ہیں۔"
+  },
+  {
+    "question": "Do you have a mobile app?",
+    "answer": "Yes, you can download our mobile app from the App Store or Google Play.",
+    "urdu_answer": "جی ہاں، آپ ہمارا موبائل ایپ ایپ اسٹور یا گوگل پلے سے ڈاؤن لوڈ کر سکتے ہیں۔"
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can contact our customer support team at support@example.com or call us at 123-456-7890.",
+    "urdu_answer": "آپ ہمارے کسٹمر سپورٹ ٹیم سے support@example.com پر ای میل کر سکتے ہیں یا ہمیں 123-456-7890 پر کال کر سکتے ہیں۔"
+  },
+  {
+    "question": "Do you offer discounts for bulk orders?",
+    "answer": "Yes, we offer discounts for bulk orders. Please contact our sales team for more details.",
+    "urdu_answer": "جی ہاں، ہم بڑے آرڈرز کے لیے رعایت پیش کرتے ہیں۔ مزید تفصیلات کے لیے براہ کرم ہماری سیلز ٹیم سے رابطہ کریں۔"
+  },
+  {
+    "question": "How do I change my account password?",
+    "answer": "You can change your password by visiting the 'Account Settings' page.",
+    "urdu_answer": "آپ اپنا پاس ورڈ 'اکاؤنٹ سیٹنگز' صفحے پر جا کر تبدیل کر سکتے ہیں۔"
+  },
+  {
+    "question": "What should I do if my product is damaged?",
+    "answer": "If your product is damaged, please contact our support team with your order details.",
+    "urdu_answer": "اگر آپ کی مصنوعات خراب ہو گئی ہے، تو براہ کرم اپنے آرڈر کی تفصیلات کے ساتھ ہماری سپورٹ ٹیم سے رابطہ کریں۔"
+  },
+  {
+    "question": "Do you offer gift wrapping?",
+    "answer": "Yes, we offer gift wrapping for an additional fee.",
+    "urdu_answer": "جی ہاں، ہم اضافی فیس کے ساتھ گفٹ رپنگ پیش کرتے ہیں۔"
+  },
+  {
+    "question": "How do I apply a discount code?",
+    "answer": "You can apply a discount code during checkout by entering it in the 'Discount Code' field.",
+    "urdu_answer": "آپ چیک آؤٹ کے دوران 'ڈسکاؤنٹ کوڈ' فیلڈ میں کوڈ درج کر کے ڈسکاؤنٹ کوڈ لاگو کر سکتے ہیں۔"
+  },
+  {
+    "question": "Can I change my shipping address after placing an order?",
+    "answer": "Yes, you can change your shipping address before your order has been shipped.",
+    "urdu_answer": "جی ہاں، آپ اپنا شپنگ ایڈریس آرڈر شپ ہونے سے پہلے تبدیل کر سکتے ہیں۔"
+  },
+  {
+    "question": "Do you offer same-day delivery?",
+    "answer": "Yes, we offer same-day delivery for select locations.",
+    "urdu_answer": "جی ہاں، ہم منتخب مقامات کے لیے اسی دن کی ڈیلیوری پیش کرتے ہیں۔"
+  },
+  {
+    "question": "How do I check my order history?",
+    "answer": "You can view your order history by visiting the 'Order History' section in your account.",
+    "urdu_answer": "آپ اپنے اکاؤنٹ میں 'آرڈر ہسٹری' سیکشن کا دورہ کر کے اپنی آرڈر ہسٹری دیکھ سکتے ہیں۔"
+  },
+  {
+    "question": "What is your privacy policy?",
+    "answer": "Our privacy policy can be found on the 'Privacy Policy' page of our website.",
+    "urdu_answer": "ہماری پرائیویسی پالیسی ہماری ویب سائٹ کے 'پرائیویسی پالیسی' صفحے پر مل سکتی ہے۔"
+  },
+  {
+    "question": "Do you sell gift cards?",
+    "answer": "Yes, we offer gift cards in various denominations.",
+    "urdu_answer": "جی ہاں، ہم مختلف قیمتوں میں گفٹ کارڈز پیش کرتے ہیں۔"
+  }
+]

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<style>
+  body {
+    background-color:#d2b4de ;
+    text-align: center; /* Center all content */
+    
+  }
+
+  h1, h4 {
+    color: white;
+    text-align: center;
+  }
+
+  img {
+    margin-top: 20px;
+    width: 60%;
+    height: auto;
+    max-width: 400px; /* Ensures the image is responsive */
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px; /* Keep the text centered and aligned */
+  }
+  p{
+    text-align: center;
+    text-content:center;
+    text-align: justify;
+    line-height: 1.6;
+  }
+</style>
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/all.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading" style=>
+                          <h3> BREAST CANCER PREDICTION SYSTEM</h3>
+    
+                          <p>
+                            Early detection saves lives. Get started by predicting breast cancer. Breast cancer is cancer that forms in the cells of the breast.
+                            After skin cancer, breast cancer is the most common cancer diagnosed in women in the United States. Breast cancer can occur in both 
+                            men and women, but it's far more common in women. Substantial support for breast cancer awareness and research funding has helped 
+                            create advances in the diagnosis and treatment of breast cancer. Breast cancer survival rates have increased, and the number of deaths
+                            associated with this disease is steadily declining,largely due to factors such as earlier detection, a new personalized approach to treatment, 
+                            and a better understanding of the disease.
+                          </p>
+                      
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+       
+{% endblock %}
