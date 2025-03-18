@@ -1,11 +1,21 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify,request,session, redirect, url_for
 import json
 import asyncio
 import aiohttp
 from deep_translator import GoogleTranslator
-
+from flask import Flask, request, jsonify
+import mysql.connector
 # Initialize the app
 app = Flask(__name__)
+
+
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="chatbot_db"
+)
+cursor = db.cursor()
 
 # Load the knowledge base
 with open("knowledge_base.json", "r", encoding="utf-8") as f:
@@ -104,51 +114,68 @@ def index():
     return render_template("index.html")
 
 
-
 @app.route("/chat", methods=["POST"])
 def chat():
     user_query = request.form["user_query"]
     language = request.form.get("language", "en")  # Default to English
+    user_id = request.form.get("user_id", "default_user")  
 
-    # Store user's language preference
-    if "user_id" in request.form:  
-        user_id = request.form["user_id"]  
-        user_data[user_id] = user_data.get(user_id, {})
-        user_data[user_id]["language"] = language  
-    else:
-        user_id = "default_user"
-        user_data[user_id] = user_data.get(user_id, {})
-        user_data[user_id]["language"] = language  
+    # Initialize user session if not exists
+    if user_id not in user_data:
+        user_data[user_id] = {}
 
-    # Retrieve user's preferred language
-    language = user_data[user_id]["language"]
+    user_data[user_id]["language"] = language  # Store language preference
 
-    # Check if user provided their name
+    response = find_answer_in_knowledge_base(user_query, language)  # Default response
+
+    # Step 1: Store Name
     if "my name is" in user_query.lower():
         user_name = user_query.split("my name is")[-1].strip()
         user_data[user_id]["name"] = user_name
         response = f"Thanks, {user_name}! Can you please provide your email?"
 
-    # Check if user provided their email
+    # Step 2: Store Email
     elif "@" in user_query and "." in user_query:
         user_data[user_id]["email"] = user_query.strip()
         response = f"Thank you, {user_data[user_id]['name']}! Now, can you please provide your phone number?"
 
-    # Check if user provided their phone number (Assuming it's 10 digits)
+    # Step 3: Store Phone Number
     elif user_query.isdigit() and len(user_query) == 10:
         user_data[user_id]["phone"] = user_query
         response = f"Great, {user_data[user_id]['name']}! Your details are saved: Email - {user_data[user_id]['email']}, Phone - {user_data[user_id]['phone']}."
 
-    else:
-        response = find_answer_in_knowledge_base(user_query, language)
+        # Insert Data into MySQL
+        try:
+            query = """
+                INSERT INTO users (user_id, name, email, phone, language) 
+                VALUES (%s, %s, %s, %s, %s)
+                ON DUPLICATE KEY UPDATE name=%s, email=%s, phone=%s, language=%s
+            """
+            values = (user_id, user_data[user_id]["name"], user_data[user_id]["email"], user_data[user_id]["phone"], 
+                      user_data[user_id]["language"], user_data[user_id]["name"], user_data[user_id]["email"], 
+                      user_data[user_id]["phone"], user_data[user_id]["language"])
+            cursor.execute(query, values)
+            db.commit()
+
+            # Clear session after storing data
+            del user_data[user_id]
+
+        except mysql.connector.Error as err:
+            response = f"Database error: {err}"
 
     # Translate response if needed
     if language != "en":
         response = GoogleTranslator(source="auto", target=language).translate(response)
 
     return jsonify({"response": response})
-
-
+@app.route("/users")
+def users():
+    try:
+        cursor.execute("SELECT * FROM users")  # Fetch all user data
+        users_data = cursor.fetchall()  # Retrieve data from database
+        return render_template("users.html", users=users_data)
+    except mysql.connector.Error as err:
+        return f"Database error: {err}"
 
 if __name__ == "__main__":
     app.run(debug=True)

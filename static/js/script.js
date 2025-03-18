@@ -44,3 +44,4 @@ function handleKeyPress(e) {
         sendQuery();
     }
 }
+
